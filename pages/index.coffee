@@ -13,8 +13,9 @@ tweetBtn = ->
     'data-url': 'http://shdd.charlestoncodes.com', 
     'data-text': 'Sep 7 - Super Happy Dev Event #chsdev #chstech @charlestoncodes', 'Tweet'
   script '!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");'
-  
-  
+
+
+
 div '.container.content', ->
   div '#overview.hero-unit', ->
     div '.span2', -> img src: '/img/codecamp_logo.png'
@@ -93,7 +94,7 @@ div '.container.content', ->
   div '.row.section', ->
     div '.hero-unit', ->
       jpg2 'charlestoncodes'
-      a '.btn.btn-primary.pull-right', href: '/sponsor.html', 'How can I sponsor this event?'
+      a '.btn.btn-primary.pull-right', href: '#sponsorModal', 'data-toggle': 'modal', 'How can I sponsor this event?'
       div '.clearfix', ''
       
   div '#register.row.section', ->
@@ -119,3 +120,28 @@ div '.container.content', ->
     p '&copy; COPYRIGHT 2012 CharlestonCodes.com'
     p -> a href: 'mailto: info@charlestoncodes.com', 'info@charlestoncodes.com' 
     p 'Phone: 843-724-3773'
+
+div '#sponsorModal.modal.hide', ->
+  div '.modal-header', ->
+    button '.close', 'data-dismiss': 'modal', 'x'
+    h3 'How can I sponsor this event?'
+  div '.modal-body', ->
+    table '.table.table-bordered', ->
+      tr ->
+        th 'Cost'
+        td '$200'
+      tr ->
+        th 'Includes'
+        td ''
+      tr ->
+        th ''
+        td 'Mentioned at the beginning of each session at the event'
+      tr ->
+        th ''
+        td 'Logo on Event T-Shirts'
+      tr ->
+        th ''
+        td 'Logo shown on Event WebSite'
+      tr ->
+        th 'Email'
+        td -> a href: 'mailto:info@charlestoncodes.com', 'info@charlestoncodes.com'
