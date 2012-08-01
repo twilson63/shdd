@@ -129,7 +129,7 @@ div '#sponsorModal.modal.hide', ->
     table '.table.table-bordered', ->
       tr ->
         th 'Cost'
-        td '$200'
+        td '$250'
       tr ->
         th 'Includes'
         td ''
