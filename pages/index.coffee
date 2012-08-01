@@ -11,7 +11,7 @@ tweetBtn = ->
   a '.twitter-share-button', 
     href: 'https://twitter.com/share', 
     'data-url': 'http://shdd.charlestoncodes.com', 
-    'data-text': 'Sep 7 - Super Happy Dev Event #chsdev #chstech @charlestoncodes', 'Tweet'
+    'data-text': 'Sep 7 - Super Happy Dev Event #chsdev #chstech @chscodes', 'Tweet'
   script '!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");'
 
 
@@ -41,9 +41,8 @@ div '.container.content', ->
     div '.span6', ->
       h2 'Details'
       p '''
-      Super Happy Dev Day is a one day event for the Charleston Software Development Community.  Featuring six talks focused on emerging open source software 
-      technologies.  Each session will be 20 to 30 minutes long and given by a local professional software developer.  There will be two sessions, a morning session and an afternoon session.  After each session, a 30 minute panel will be held to take questions from the audience.
-      
+      Super Happy Dev Day, a one-day event designed for the Charleston Software Development Community, will feature six talks focused on emerging, open-source software technologies. Each talk will be 20 to 30 minutes long and given by a local, professional software developer.
+      There will be two sessions, a morning session and an afternoon session. Following each session, a 30 minute panel will take questions from the audience.
       '''
       h3 '''
       Experience some Super Geeky Software Tech
