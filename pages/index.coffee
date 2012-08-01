@@ -1,4 +1,4 @@
-reg_link = '#'
+reg_link = 'http://superhappydevday.eventbrite.com/'
 speaker = (name, talk, avatar) ->
   div '.well.span6.offset2', ->
     div '.span1', -> img src: avatar, style: 'max-width: 90px;'
@@ -120,7 +120,8 @@ div '.container.content', ->
     p '&copy; COPYRIGHT 2012 CharlestonCodes.com'
     p -> a href: 'mailto: info@charlestoncodes.com', 'info@charlestoncodes.com' 
     p 'Phone: 843-724-3773'
-
+    div '.clearfix', ''
+    
 div '#sponsorModal.modal.hide', ->
   div '.modal-header', ->
     button '.close', 'data-dismiss': 'modal', 'x'
