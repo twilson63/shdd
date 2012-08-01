@@ -17,7 +17,7 @@ tweetBtn = ->
 
 
 div '.container.content', ->
-  div '#overview.hero-unit', ->
+  div '#overview.hero-unit.row', ->
     div '.span2', -> img src: '/img/codecamp_logo.png'
     div '.span8', style: 'padding-top: 35px;', ->
       h1 'Super Happy Dev Day'
