@@ -6,6 +6,14 @@ speaker = (name, talk, avatar) ->
       h3 name
       p talk
     div '.clearfix', ''
+
+tweetBtn = ->
+  a '.twitter-share-button', 
+    href: 'https://twitter.com/share', 
+    'data-url': 'http://shdd.charlestoncodes.com', 
+    'data-text': 'Sep 7 - Super Happy Dev Event #chsdev #chstech @charlestoncodes', 'Tweet'
+  script '!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");'
+  
   
 div '.container.content', ->
   div '#overview.hero-unit', ->
@@ -27,12 +35,7 @@ div '.container.content', ->
       h2 ->
         text 'Where: '
         a href: 'http://flagship2.com', 'Flagship 2'
-      div '.pull-right', style:'margin-top: 10px;', ->
-        a '.twitter-share-button', 
-          href: 'https://twitter.com/share', 
-          'data-url': 'http://shdd.charlestoncodes.com', 
-          'data-text': 'Sep 7 - Super Happy Dev Event #chsdev #chstech @charlestoncodes', 'Tweet'
-        script '!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");'
+      div '.pull-right', style:'margin-top: 10px;', -> tweetBtn()
 
     div '.span6', ->
       h2 'Details'
@@ -99,17 +102,20 @@ div '.container.content', ->
         h2 'Registration'
     hr()
   div '.row.section', ->
-    div '.span11.offset1', ->
-      h2 'How much does it cost?'
-      p '$25 dollars'
-      h2 'What do I get?'
-      p 'Dive into the Emerging Technology'
-      p 'Box Lunch and Afternoon Snack'
-      p 'T-Shirt'
-      p 'etc.'
-      center -> a '.btn.btn-primary', href: reg_link, 'Register for Event'
-  footer ->
-    p ->
-      a href: '#', 'Add Tweet Button Here'
-    p 'All Rights Reserved'
-
+    div '.row', ->
+      div '.span11.offset1', ->
+        h2 'How much does it cost?'
+        p style: 'margin-left: 0;', '$25 dollars'
+        h2 'What do I get?'
+        p 'Dive into the Emerging Technology'
+        p 'Box Lunch and Afternoon Snack'
+        p 'T-Shirt'
+        p 'etc.'
+        center -> a '.btn.btn-primary', href: reg_link, 'Register for Event'
+  hr()
+  footer style: 'padding: 30px; background-color: whitesmoke;text-align: center', ->
+    p -> tweetBtn()
+    p 'All Rights Reserved...'
+    p '&copy; COPYRIGHT 2012 CharlestonCodes.com'
+    p -> a href: 'mailto: info@charlestoncodes.com', 'info@charlestoncodes.com' 
+    p 'Phone: 843-724-3773'
