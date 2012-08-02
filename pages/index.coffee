@@ -1,7 +1,7 @@
 reg_link = 'http://superhappydevday.eventbrite.com/'
 speaker = (name, talk, avatar) ->
   div '.well.span6.offset2', ->
-    div '.span1', -> img src: avatar, style: 'max-width: 90px;'
+    div '.span1', -> img src: avatar, style: 'max-width: 90px;-moz-border-radius: 15px;border-radius: 15px;'
     div '.span3.offset1', ->
       h3 name
       p talk
@@ -36,6 +36,7 @@ div '.container.content', ->
       h2 ->
         text 'Where: '
         a href: 'http://flagship2.com', 'Flagship 2'
+        a href: 'http://flagship2.com', -> img src: '/img/fs2_logo.jpeg', style: '-moz-border-radius: 15px;border-radius: 15px;'
       div '.pull-right', style:'margin-top: 10px;', -> tweetBtn()
 
     div '.span6', ->
@@ -91,8 +92,11 @@ div '.container.content', ->
         h2 'Sponsors'
     hr()
   div '.row.section', ->
-    div '.hero-unit', ->
-      jpg2 'charlestoncodes'
+    div '.span11.offset1', ->
+      a href: 'http://charlestoncodes.com', ->
+        img src: '/img/codecamp_logo.png'
+      a href: 'http://charlestondigitalcorridor.com/', ->
+        img src: '/img/chsdigital.jpeg', style: 'height: 160px; width: 160px;'
       a '.btn.btn-primary.pull-right', href: '#sponsorModal', 'data-toggle': 'modal', 'How can I sponsor this event?'
       div '.clearfix', ''
       
