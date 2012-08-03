@@ -7,6 +7,9 @@ speaker = (name, talk, avatar) ->
       p talk
     div '.clearfix', ''
 
+sponsor = (link, logo) ->
+  a href: link, -> img src: logo, style: 'height: 160px;'
+
 tweetBtn = ->
   a '.twitter-share-button', 
     href: 'https://twitter.com/share', 
@@ -35,8 +38,13 @@ div '.container.content', ->
       h2 'When: September 7, 2012'
       h2 ->
         text 'Where: '
-        a href: 'http://flagship2.com', 'Flagship 2'
-        a href: 'http://flagship2.com', -> img src: '/img/fs2_logo.jpeg', style: '-moz-border-radius: 15px;border-radius: 15px;'
+        a href: 'http://charlestonflagship.com/', 'Flagship'
+        address -> 
+          small ->
+            text '475-A East Bay Street'
+            br()
+            text 'Charleston, South Carolina 29403'
+        a href: 'http://charlestonflagship.com/', -> img src: '/img/fs1_logo.gif', style: '-moz-border-radius: 15px;border-radius: 15px;'
       div '.pull-right', style:'margin-top: 10px;', -> tweetBtn()
 
     div '.span6', ->
@@ -83,7 +91,7 @@ div '.container.content', ->
     speaker 'Ben Cates', 'Javascript MV-star', '/img/bencates.png'
     speaker 'Dayel Ostraco', 'Mobile Development', '/img/dayel.jpeg'
     speaker 'Mark Gunnels', 'Functional Programming with Clojure', '/img/mark-gunnels-color.jpg'
-    speaker 'Tom DeMille', 'NoSQL - MongoDb and Redis', '/img/headshot1.jpeg'
+    speaker 'Tom DeMille', 'NoSQL - MongoDb and Couchbase', '/img/headshot1.jpeg'
     speaker 'Tom Wilson', 'Rails and NodeJs', '/img/tom.png'
 
   div '#sponsors.row.section', ->
@@ -93,10 +101,10 @@ div '.container.content', ->
     hr()
   div '.row.section', ->
     div '.span11.offset1', ->
-      a href: 'http://charlestoncodes.com', ->
-        img src: '/img/codecamp_logo.png'
-      a href: 'http://charlestondigitalcorridor.com/', ->
-        img src: '/img/chsdigital.jpeg', style: 'height: 160px; width: 160px;'
+      sponsor 'http://charlestoncodes.com', '/img/codecamp_logo.png'
+      sponsor 'http://charlestondigitalcorridor.com', '/img/chsdigital.jpeg'
+      sponsor 'http://www.lce.com/', '/img/lce_logo.gif'
+
       a '.btn.btn-primary.pull-right', href: '#sponsorModal', 'data-toggle': 'modal', 'How can I sponsor this event?'
       div '.clearfix', ''
       
