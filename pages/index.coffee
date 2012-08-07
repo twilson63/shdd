@@ -37,14 +37,16 @@ div '.container.content', ->
       h2 'When: September 7, 2012'
       h2 ->
         text 'Where: '
-        a href: 'http://flagship2.com', 'Flagship 2'
-        a href: 'http://flagship2.com', -> img src: '/img/fs2_logo.jpeg', style: '-moz-border-radius: 15px;border-radius: 15px;'
+        a href: 'http://charlestonflagship.com', 'Flagship'
+        a href: 'http://charlestonflagship.com', -> img src: '/img/flagship.gif', style: '-moz-border-radius: 15px;border-radius: 15px;'
       div '.pull-right', style:'margin-top: 10px;', -> tweetBtn()
 
     div '.span6', ->
       h2 'Details'
       p '''
       Super Happy Dev Day, a one-day event designed for the Charleston Software Development Community, will feature six talks focused on emerging, open-source software technologies. Each talk will be 20 to 30 minutes long and given by a local, professional software developer.
+      '''
+      p '''
       There will be two sessions, a morning session and an afternoon session. Following each session, a 30 minute panel will take questions from the audience.
       '''
       h3 '''
@@ -116,7 +118,7 @@ div '.container.content', ->
         h2 'How much does it cost?'
         p style: 'margin-left: 0;', '$25 dollars'
         h2 'What do I get?'
-        p 'Dive into the Emerging Technology'
+        p 'To take a dive into some Emerging Technology'
         p 'Box Lunch and Afternoon Snack'
         p 'T-Shirt'
         p 'etc.'
