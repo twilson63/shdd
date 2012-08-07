@@ -14,6 +14,8 @@ tweetBtn = ->
     'data-text': 'Sep 7 - Super Happy Dev Event #chsdev #chstech @chscodes', 'Tweet'
   script '!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");'
 
+sponsor = (url, image) ->
+  a href: url, style: 'margin-right: 40px;', -> img src: image, style: 'max-height: 160px;', alt: url
 
 
 div '.container.content', ->
@@ -93,11 +95,14 @@ div '.container.content', ->
     hr()
   div '.row.section', ->
     div '.span11.offset1', ->
-      a href: 'http://charlestoncodes.com', ->
-        img src: '/img/codecamp_logo.png'
-      a href: 'http://charlestondigitalcorridor.com/', ->
-        img src: '/img/chsdigital.jpeg', style: 'height: 160px; width: 160px;'
-      a '.btn.btn-primary.pull-right', href: '#sponsorModal', 'data-toggle': 'modal', 'How can I sponsor this event?'
+      sponsor 'http://charlestoncodes.com', '/img/codecamp_logo.png'
+      sponsor 'http://lce.com', '/img/LCE.FinalLogo.png'
+      sponsor 'http://charlestondigitalcorridor.com', '/img/chsdigital.jpeg'
+      sponsor 'http://boomtownroi.com', '/img/boomtown-logo.png'
+      sponsor 'http://carepoint.com', '/img/carepoint.png'
+      br()
+      a '.btn.btn-primary.pull-right', href: '#sponsorModal', style:'margin-right: 30px;', 'data-toggle': 'modal', 'How can I sponsor this event?'
+      
       div '.clearfix', ''
       
   div '#register.row.section', ->
