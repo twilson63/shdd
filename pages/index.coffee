@@ -25,7 +25,7 @@ div '.container.content', ->
       h1 'Super Happy Dev Day'
       p 'A Taste of Emerging Software Technology in Charleston'
       div '.pull-right', ->
-        a '.btn.btn-primary', href: reg_link, style: 'margin-bottom: 20px;', 'Register for Event'          
+        a '.btn.btn-primary', href: reg_link, style: 'margin-bottom: 20px;', 'SOLD OUT'
 
     div '.clearfix', ''
   div '#about.row', ->
@@ -122,7 +122,7 @@ div '.container.content', ->
         p 'Box Lunch and Afternoon Snack'
         p 'T-Shirt'
         p 'etc.'
-        center -> a '.btn.btn-primary', href: reg_link, 'Register for Event'
+        center -> a '.btn.btn-primary', href: reg_link, 'SOLD OUT'
   hr()
   footer style: 'padding: 30px; background-color: whitesmoke;text-align: center', ->
     p -> tweetBtn()
