@@ -17,6 +17,8 @@ tweetBtn = ->
     'data-text': 'Sep 7 - Super Happy Dev Event #chsdev #chstech @chscodes', 'Tweet'
   script '!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");'
 
+sponsor = (url, image) ->
+  a href: url, style: 'margin-right: 40px;', -> img src: image, style: 'max-height: 160px;', alt: url
 
 
 div '.container.content', ->
@@ -26,7 +28,7 @@ div '.container.content', ->
       h1 'Super Happy Dev Day'
       p 'A Taste of Emerging Software Technology in Charleston'
       div '.pull-right', ->
-        a '.btn.btn-primary', href: reg_link, style: 'margin-bottom: 20px;', 'Register for Event'          
+        a '.btn.btn-primary', href: reg_link, style: 'margin-bottom: 20px;', 'SOLD OUT'
 
     div '.clearfix', ''
   div '#about.row', ->
@@ -44,13 +46,15 @@ div '.container.content', ->
             text '475-A East Bay Street'
             br()
             text 'Charleston, South Carolina 29403'
-        a href: 'http://charlestonflagship.com/', -> img src: '/img/fs1_logo.gif', style: '-moz-border-radius: 15px;border-radius: 15px;'
+        a href: 'http://charlestonflagship.com', -> img src: '/img/flagship.gif', style: '-moz-border-radius: 15px;border-radius: 15px;'
       div '.pull-right', style:'margin-top: 10px;', -> tweetBtn()
 
     div '.span6', ->
       h2 'Details'
       p '''
       Super Happy Dev Day, a one-day event designed for the Charleston Software Development Community, will feature six talks focused on emerging, open-source software technologies. Each talk will be 20 to 30 minutes long and given by a local, professional software developer.
+      '''
+      p '''
       There will be two sessions, a morning session and an afternoon session. Following each session, a 30 minute panel will take questions from the audience.
       '''
       h3 '''
@@ -62,8 +66,8 @@ div '.container.content', ->
       h2 'Agenda'
   hr()
   div '.row.section', ->
-    div '.span11.offset1', ->
-      div '.span5', ->
+    div '.span12', ->
+      div '.span5', style: 'margin-left: 50px;', ->
         div '.well', ->
           h3 'Morning Session'
           p -> '10:30am -> 1pm'
@@ -72,7 +76,7 @@ div '.container.content', ->
             li 'Javascript MV-star'
             li 'Mobile Development'
             li 'Lunch and Panel Discussion'
-      div '.span5', ->
+      div '.span6', ->
         div '.well', ->
           h3 'Afternoon Session'
           p -> '1pm -> 3:30pm'
@@ -102,12 +106,16 @@ div '.container.content', ->
   div '.row.section', ->
     div '.span11.offset1', ->
       sponsor 'http://charlestoncodes.com', '/img/codecamp_logo.png'
+      sponsor 'http://lce.com', '/img/LCE.FinalLogo.png'
       sponsor 'http://charlestondigitalcorridor.com', '/img/chsdigital.jpeg'
-      sponsor 'http://www.lce.com/', '/img/lce_logo.gif'
-
-      a '.btn.btn-primary.pull-right', href: '#sponsorModal', 'data-toggle': 'modal', 'How can I sponsor this event?'
+      sponsor 'http://boomtownroi.com', '/img/boomtown-logo.png'
+      sponsor 'http://carepoint.com', '/img/carepoint.png'
+      sponsor 'http://sparcedge.com', '/img/SPARC-LOGO.png'
+      sponsor 'http://blackbaud.com', '/img/Logo-Blackbaud.jpg'
+      sponsor 'http://jackhq.com', '/img/jackhq-logo.png'
+      br()
+      a '.btn.btn-primary.pull-right', href: '#sponsorModal', style:'margin-right: 30px;', 'data-toggle': 'modal', 'How can I sponsor this event?'
       div '.clearfix', ''
-      
   div '#register.row.section', ->
     div '.row', ->
       div '.span11.offset1', ->
@@ -119,11 +127,11 @@ div '.container.content', ->
         h2 'How much does it cost?'
         p style: 'margin-left: 0;', '$25 dollars'
         h2 'What do I get?'
-        p 'Dive into the Emerging Technology'
+        p 'To take a dive into some Emerging Technology'
         p 'Box Lunch and Afternoon Snack'
         p 'T-Shirt'
         p 'etc.'
-        center -> a '.btn.btn-primary', href: reg_link, 'Register for Event'
+        center -> a '.btn.btn-primary', href: reg_link, 'SOLD OUT'
   hr()
   footer style: 'padding: 30px; background-color: whitesmoke;text-align: center', ->
     p -> tweetBtn()
